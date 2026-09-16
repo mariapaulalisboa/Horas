@@ -13,24 +13,38 @@
        <h2>Feito para quem <span id="rotating-word" class="rotating">viaja</span></h2>    
     </header>
     <main>
-      <h1>O horário na ponta dos seus Dedos. Sem fazer conta.</h1>
-      <h2>Dois horarios, um toque, pronto para copiar.</h2>
-      <section>
-        <p>Seu horário agora:</p>
-        <div></div> <!-- cidade -->
-        <div></div> <!-- horário em tempo real -->
-        <button></button>
-        <button></button>
-        <p>Atualiza em Tempo Real</p>
+      <h1>O horário na ponta dos seus dedos. Sem fazer conta.</h1>
+      <p class="lead">Dois horários, um toque, pronto para copiar.</p>
+      
+      <section class="now-card">
+        <p class="now-label">Seu horário agora:</p>
+        <div class="now-place">📍 <span id="userPlace">—</span></div>
+        <div class="now-time" id="userNowTime">--:--</div>
+        <hr>
+        <button class="copy-row" id="rowA">
+          <span class="flag" id="flagA"></span>
+          <span class="city" id="labelA">—</span>
+          <span class="time" id="timeA">--:--</span>
+        </button>
+        <button class="copy-row" id="rowB">
+          <span class="flag" id="flagB"></span>
+          <span class="city" id="labelB">—</span>
+          <span class="time" id="timeB">--:--</span>
+        </button>
+        <p class="live-note"><span class="dot">●</span> Atualiza em tempo real</p>
       </section>
-      <section>
-        <label>Você está nesse lugar? Alterar a Localizaçãoo.</label>
-        <input>
+      
+      <section class="picker">
+        <label for="userCity">Você está nesse lugar? Alterar a localização.</label>
+        <input list="cityList" id="userCity" placeholder="Digite sua cidade...">
       </section>
-      <section>
-        <label>Comparar com</label>
-        <input>
+ 
+      <section class="picker">
+        <label for="destCity">Comparar com</label>
+        <input list="cityList" id="destCity" placeholder="Digite a cidade de destino...">
       </section>
     </main>
+    <datalist id="cityList"></datalist>
+    <script src="script.js"></script>
   </body>
 </html>
